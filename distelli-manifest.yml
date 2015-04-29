@@ -1,0 +1,10 @@
+bmcgehee/SimplePHPApp:
+  Env:
+    - PORT: "8006"
+  Exec:
+    - 'php -S 0.0.0.0:$PORT simpleapp.php'
+  PkgInclude:
+    - simpleapp.php
+  PreInstall:
+    - sudo apt-get -y install php5-cli
+
